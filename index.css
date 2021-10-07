@@ -1,0 +1,666 @@
+:root {
+  --hand-image: url("./assets/img/hand.png");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hide {
+  display: none;
+}
+
+.blur {
+  animation: blurAnimation 1s forwards;
+}
+
+@keyframes blurAnimation {
+  to {
+    filter: blur(8px);
+  }
+}
+
+.unblur {
+  animation: unblur 2s forwards;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+#container {
+  width: 100vw;
+  height: 177.7vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-container {
+  position: relative;
+  width: 100vw;
+  height: 177.7vw;
+  position: absolute;
+  overflow: hidden;
+}
+
+#background {
+  width: 100vw;
+  height: 177.7vw;
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("./assets/img/background.jpg");
+}
+
+#hand {
+  background-image: var(--hand-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 26vw;
+  height: 31vw;
+  top: 148vw;
+  left: 24vw;
+  z-index: 20;
+}
+
+.hand-animation-choose-color {
+  animation: handAnimationChooseColor 3s infinite;
+}
+
+.hand-animation-touch-color {
+  animation: handAnimationTouchBanana 2s infinite;
+}
+
+@keyframes handAnimationChooseColor {
+  0% {
+    left: 24vw;
+    transform: scale(1);
+  }
+  10% {
+    left: 24vw;
+    transform: scale(0.8);
+  }
+  20% {
+    left: 24vw;
+    transform: scale(1);
+  }
+  30% {
+    left: 48vw;
+    transform: scale(1);
+  }
+  40% {
+    left: 48vw;
+    transform: scale(0.8);
+  }
+  50% {
+    left: 48vw;
+    transform: scale(1);
+  }
+  60% {
+    left: 70vw;
+    transform: scale(1);
+  }
+  70% {
+    left: 70vw;
+    transform: scale(0.8);
+  }
+  80% {
+    left: 70vw;
+    transform: scale(1);
+  }
+  100% {
+    left: 24vw;
+    transform: scale(1);
+  }
+}
+
+@keyframes handAnimationTouchBanana {
+  0% {
+    top: 81vw;
+    left: 49vw;
+  }
+  25% {
+    transform: scale(0.8);
+    top: 81vw;
+    left: 49vw;
+  }
+  50% {
+    transform: scale(1);
+    top: 81vw;
+    left: 49vw;
+  }
+  75% {
+    transform: scale(0.8);
+    top: 81vw;
+    left: 49vw;
+  }
+  100% {
+    transform: scale(1);
+    top: 81vw;
+    left: 49vw;
+  }
+}
+
+#choose-colors {
+  background-image: url("./assets/img/choose_the_color.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 73vw;
+  height: 29vw;
+  top: 9vw;
+  left: 16vw;
+  animation: chooseColorsAnimation 2s infinite;
+}
+
+@keyframes chooseColorsAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#banana-menu {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 67vw;
+  height: 79vw;
+  top: 45vw;
+  left: 18vw;
+}
+
+.banana-yellow-image {
+  background-image: url("./assets/img/banana.png");
+}
+.banana-purple-image {
+  background-image: url("./assets/img/banana_purple.png");
+}
+.banana-blue-image {
+  background-image: url("./assets/img/banana_blue.png");
+}
+
+#color-items {
+}
+
+#yellow-color {
+  background-image: url("./assets/img/yellow-color.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 19vw;
+  height: 20vw;
+  top: 144vw;
+  left: 17vw;
+}
+
+#purple-color {
+  background-image: url("./assets/img/purple_color.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 19vw;
+  height: 20vw;
+  top: 144vw;
+  left: 40vw;
+}
+
+#blue-color {
+  background-image: url("./assets/img/blue-color.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 19vw;
+  height: 20vw;
+  top: 144vw;
+  left: 63vw;
+}
+
+/* main-game */
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 177.7vw;
+  overflow: hidden;
+  z-index: 50;
+}
+
+#game-background {
+  width: 100vw;
+  height: 177.7vw;
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("./assets/img/background.jpg");
+}
+
+#squish-that {
+  background-image: url("./assets/img/squish_that.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 91vw;
+  height: 15vw;
+  top: 16vw;
+  left: 5vw;
+}
+
+.game-canvas-1 {
+  position: absolute;
+  z-index: 400;
+  /* top: 80vw;
+  left: 7vw; */
+  /* width: 100%;
+  height: 70%;  */
+}
+
+.game-canvas-2 {
+  position: absolute;
+  /* visibility: hidden; */
+  z-index: 400;
+  /* top: 80vw;
+  left: 7vw; */
+}
+
+#game-hand {
+  background-image: var(--hand-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 29vw;
+  height: 35vw;
+  top: 109vw;
+  left: 22vw;
+  z-index: 500;
+  animation: gameHandAnimation 2s infinite;
+}
+
+@keyframes gameHandAnimation {
+  0% {
+    top: 109vw;
+    left: 22vw;
+  }
+  25% {
+    top: 109vw;
+    left: 22vw;
+    transform: scale(0.8);
+  }
+  50% {
+    top: 72vw;
+    left: 68vw;
+    transform: scale(0.8);
+  }
+  75% {
+    top: 72vw;
+    left: 68vw;
+    transform: scale(1);
+  }
+  100% {
+    top: 109vw;
+    left: 22vw;
+    transform: scale(1);
+  }
+}
+
+/* packshot */
+
+#packshot {
+  position: absolute;
+  width: 100vw;
+  height: 177.7vw;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#logo {
+  background-image: url("./assets/img/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 85vw;
+  height: 23vw;
+  top: 68vw;
+  left: 9vw;
+}
+
+#icon {
+  background-image: url("./assets/img/icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 35vw;
+  height: 37vw;
+  top: 19vw;
+  left: 33vw;
+}
+
+#button {
+  background-image: url("./assets/img/button.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 77.7vw;
+  height: 24vw;
+  top: 122vw;
+  left: 12vw;
+}
+
+.button-animation {
+  animation: buttonAnimation 2s infinite;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #container {
+    width: 180.2vh;
+    height: 101.4vh;
+  }
+  #menu-container {
+    width: 180.2vh;
+    height: 101.4vh;
+  }
+  #background {
+    width: 180.2vh;
+    height: 101.4vh;
+  }
+  #hand {
+    width: 14.2vh;
+    height: 17vh;
+    top: 87vh;
+    left: 72vh;
+  }
+
+  @keyframes handAnimationChooseColor {
+    0% {
+      left: 72vh;
+      transform: scale(1);
+    }
+    10% {
+      left: 72vh;
+      transform: scale(0.8);
+    }
+    20% {
+      left: 72vh;
+      transform: scale(1);
+    }
+    30% {
+      left: 88vh;
+      transform: scale(1);
+    }
+    40% {
+      left: 88vh;
+      transform: scale(0.8);
+    }
+    50% {
+      left: 88vh;
+      transform: scale(1);
+    }
+    60% {
+      left: 110vh;
+      transform: scale(1);
+    }
+    70% {
+      left: 110vh;
+      transform: scale(0.8);
+    }
+    80% {
+      left: 110vh;
+      transform: scale(1);
+    }
+    100% {
+      left: 72vh;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes handAnimationTouchBanana {
+    0% {
+      top: 52vh;
+      left: 91vh;
+    }
+    25% {
+      transform: scale(0.8);
+      top: 52vh;
+      left: 91vh;
+    }
+    50% {
+      transform: scale(1);
+      top: 52vh;
+      left: 91vh;
+    }
+    75% {
+      transform: scale(0.8);
+      top: 52vh;
+      left: 91vh;
+    }
+    100% {
+      transform: scale(1);
+      top: 52vh;
+      left: 91vh;
+    }
+  }
+
+  #choose-colors {
+    width: 46vh;
+    height: 18vh;
+    top: 7vh;
+    left: 69vh;
+  }
+
+  #banana-menu {
+    width: 38vh;
+    height: 45vh;
+    top: 29vh;
+    left: 74vh;
+  }
+
+  #color-items {
+    
+  }
+
+  #yellow-color {
+    width: 15vh;
+    height: 16vh;
+    top: 83vh;
+    left: 65vh;
+  }
+
+  #purple-color {
+    width: 15vh;
+    height: 16vh;
+    top: 83vh;
+    left: 85vh;
+  }
+
+  #blue-color {
+    width: 15vh;
+    height: 16vh;
+    top: 83vh;
+    left: 105vh;
+  }
+
+  /* main-game */
+
+  #game-container {
+    width: 180.2vh;
+    height: 101.4vh;
+  }
+
+  #game-background {
+    width: 180.2vh;
+    height: 101.4vh;
+  }
+
+  #squish-that {
+    width: 79vh;
+    height: 13vh;
+    top: 6vh;
+    left: 54vh;
+  }
+
+  .game-canvas-1 {
+    top: 26vh;
+    left: 63vh;
+    width: 40%;
+    height: 67%;
+  }
+
+  #game-hand {
+    background-image: var(--hand-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 29vw;
+    height: 35vw;
+    top: 109vw;
+    left: 22vw;
+    z-index: 500;
+    animation: gameHandAnimation 2s infinite;
+  }
+
+  @keyframes gameHandAnimation {
+    0% {
+      top: 109vw;
+      left: 22vw;
+    }
+    25% {
+      top: 109vw;
+      left: 22vw;
+      transform: scale(0.8);
+    }
+    50% {
+      top: 72vw;
+      left: 68vw;
+      transform: scale(0.8);
+    }
+    75% {
+      top: 72vw;
+      left: 68vw;
+      transform: scale(1);
+    }
+    100% {
+      top: 109vw;
+      left: 22vw;
+      transform: scale(1);
+    }
+  }
+
+  /* packshot */
+
+  #packshot {
+    position: absolute;
+    width: 100vw;
+    height: 177.7vw;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  #logo {
+    background-image: url("./assets/img/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 85vw;
+    height: 23vw;
+    top: 68vw;
+    left: 9vw;
+  }
+
+  #icon {
+    background-image: url("./assets/img/icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 35vw;
+    height: 37vw;
+    top: 19vw;
+    left: 33vw;
+  }
+
+  #button {
+    background-image: url("./assets/img/button.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 77.7vw;
+    height: 24vw;
+    top: 122vw;
+    left: 12vw;
+  }
+
+  .button-animation {
+    animation: buttonAnimation 2s infinite;
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

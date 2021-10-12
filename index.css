@@ -216,9 +216,6 @@ body {
   background-image: url("./assets/img/banana_blue.png");
 }
 
-#color-items {
-}
-
 #yellow-color {
   background-image: url("./assets/img/yellow-color.png");
   background-size: cover;
@@ -285,18 +282,12 @@ body {
 .game-canvas-1 {
   position: absolute;
   z-index: 400;
-  /* top: 80vw;
-  left: 7vw; */
-  /* width: 100%;
-  height: 70%;  */
 }
 
 .game-canvas-2 {
   position: absolute;
   /* visibility: hidden; */
   z-index: 400;
-  /* top: 80vw;
-  left: 7vw; */
 }
 
 #game-hand {
@@ -508,10 +499,6 @@ body {
     left: 74vh;
   }
 
-  #color-items {
-    
-  }
-
   #yellow-color {
     width: 15vh;
     height: 16vh;
@@ -552,49 +539,34 @@ body {
     left: 54vh;
   }
 
-  .game-canvas-1 {
-    top: 26vh;
-    left: 63vh;
-    width: 40%;
-    height: 67%;
-  }
-
   #game-hand {
-    background-image: var(--hand-image);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 29vw;
-    height: 35vw;
-    top: 109vw;
-    left: 22vw;
-    z-index: 500;
-    animation: gameHandAnimation 2s infinite;
+    width: 17.5vh;
+    height: 21vh;
   }
 
   @keyframes gameHandAnimation {
     0% {
-      top: 109vw;
-      left: 22vw;
+      top: 80vh;
+      left: 67vh;
     }
     25% {
-      top: 109vw;
-      left: 22vw;
+      top: 80vh;
+      left: 67vh;
       transform: scale(0.8);
     }
     50% {
-      top: 72vw;
-      left: 68vw;
+      top: 51vh;
+      left: 88vh;
       transform: scale(0.8);
     }
     75% {
-      top: 72vw;
-      left: 68vw;
+      top: 51vh;
+      left: 88vh;
       transform: scale(1);
     }
     100% {
-      top: 109vw;
-      left: 22vw;
+      top: 80vh;
+      left: 67vh;
       transform: scale(1);
     }
   }
@@ -603,8 +575,8 @@ body {
 
   #packshot {
     position: absolute;
-    width: 100vw;
-    height: 177.7vw;
+    width: 180.2vh;
+    height: 101.4vh;
     overflow: hidden;
     z-index: 1000;
   }
@@ -614,10 +586,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    width: 85vw;
-    height: 23vw;
-    top: 68vw;
-    left: 9vw;
+    width: 57vh;
+    height: 15.5vh;
+    top: 43vh;
+    left: 65vh;
   }
 
   #icon {
@@ -625,10 +597,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    width: 35vw;
-    height: 37vw;
-    top: 19vw;
-    left: 33vw;
+    width: 29vh;
+    height: 30vh;
+    top: 7vh;
+    left: 81vh;
   }
 
   #button {
@@ -636,10 +608,458 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    width: 77.7vw;
-    height: 24vw;
-    top: 122vw;
-    left: 12vw;
+    width: 55.7vh;
+    height: 17vh;
+    top: 72vh;
+    left: 67vh;
+  }
+
+  .button-animation {
+    animation: buttonAnimation 2s infinite;
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 10 / 16) and (max-aspect-ratio: 1 / 1) {
+  #container {
+    width: 75.25vw;
+    height: 134vw;
+  }
+
+  #menu-container {
+    width: 75.25vw;
+    height: 134vw;
+  }
+
+  #background {
+    width: 75.25vw;
+    height: 134vw;
+  }
+
+  #hand {
+    width: 18.4vw;
+    height: 22vw;
+    top: 114vw;
+    left: 10vw;
+  }
+
+  @keyframes handAnimationChooseColor {
+    0% {
+      left: 12vw;
+      transform: scale(1);
+    }
+    10% {
+      left: 12vw;
+      transform: scale(0.8);
+    }
+    20% {
+      left: 12vw;
+      transform: scale(1);
+    }
+    30% {
+      left: 36vw;
+      transform: scale(1);
+    }
+    40% {
+      left: 36vw;
+      transform: scale(0.8);
+    }
+    50% {
+      left: 36vw;
+      transform: scale(1);
+    }
+    60% {
+      left: 60vw;
+      transform: scale(1);
+    }
+    70% {
+      left: 60vw;
+      transform: scale(0.8);
+    }
+    80% {
+      left: 60vw;
+      transform: scale(1);
+    }
+    100% {
+      left: 12vw;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes handAnimationTouchBanana {
+    0% {
+      top: 60vw;
+      left: 37vw;
+    }
+    25% {
+      transform: scale(0.8);
+      top: 60vw;
+      left: 37vw;
+    }
+    50% {
+      transform: scale(1);
+      top: 60vw;
+      left: 37vw;
+    }
+    75% {
+      transform: scale(0.8);
+      top: 60vw;
+      left: 37vw;
+    }
+    100% {
+      transform: scale(1);
+      top: 60vw;
+      left: 37vw;
+    }
+  }
+
+  #choose-colors {
+    width: 62vw;
+    height: 23vw;
+    top: 9vw;
+    left: 8vw;
+  }
+
+  #banana-menu {
+    width: 52vw;
+    height: 61vw;
+    top: 38vw;
+    left: 14vw;
+  }
+
+  #yellow-color {
+    width: 19vw;
+    height: 20vw;
+    top: 109vw;
+    left: 5vw;
+  }
+
+  #purple-color {
+    width: 19vw;
+    height: 20vw;
+    top: 109vw;
+    left: 29vw;
+  }
+
+  #blue-color {
+    width: 19vw;
+    height: 20vw;
+    top: 109vw;
+    left: 53vw;
+  }
+
+  /* main-game */
+
+  #game-container {
+    width: 75.25vw;
+    height: 134vw;
+  }
+
+  #game-background {
+    width: 75.25vw;
+    height: 134vw;
+  }
+
+  #squish-that {
+    width: 57vw;
+    height: 9vw;
+    top: 8vw;
+    left: 10vw;
+  }
+  #game-hand {
+    width: 24vw;
+    height: 29vw;
+    top: 109vw;
+    left: 22vw;
+  }
+
+  @keyframes gameHandAnimation {
+    0% {
+      top: 78vw;
+      left: 14vw;
+    }
+    25% {
+      top: 78vw;
+      left: 14vw;
+      transform: scale(0.8);
+    }
+    50% {
+      top: 45vw;
+      left: 55vw;
+      transform: scale(0.8);
+    }
+    75% {
+      top: 45vw;
+      left: 55vw;
+      transform: scale(1);
+    }
+    100% {
+      top: 78vw;
+      left: 14vw;
+      transform: scale(1);
+    }
+  }
+
+  /* packshot */
+
+  #packshot {
+    width: 75.25vw;
+    height: 134vw;
+  }
+  #logo {
+    width: 63vw;
+    height: 17vw;
+    top: 44vw;
+    left: 7vw;
+  }
+  #icon {
+    width: 27vw;
+    height: 28vw;
+    top: 9vw;
+    left: 26vw;
+  }
+  #button {
+    width: 60vw;
+    height: 18vw;
+    top: 96vw;
+    left: 8vw;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1 / 1) and (max-aspect-ratio: 16 / 10) {
+  #container {
+    width: 135.25vh;
+    height: 100vh;
+  }
+  #menu-container {
+    width: 135.25vh;
+    height: 100vh;
+  }
+  #background {
+    width: 135.25vh;
+    height: 100vh;
+  }
+  #hand {
+    width: 14.2vh;
+    height: 17vh;
+    top: 82vh;
+    left: 72vh;
+  }
+
+  @keyframes handAnimationChooseColor {
+    0% {
+      left: 50vh;
+      transform: scale(1);
+    }
+    10% {
+      left: 50vh;
+      transform: scale(0.8);
+    }
+    20% {
+      left: 50vh;
+      transform: scale(1);
+    }
+    30% {
+      left: 70vh;
+      transform: scale(1);
+    }
+    40% {
+      left: 70vh;
+      transform: scale(0.8);
+    }
+    50% {
+      left: 70vh;
+      transform: scale(1);
+    }
+    60% {
+      left: 90vh;
+      transform: scale(1);
+    }
+    70% {
+      left: 90vh;
+      transform: scale(0.8);
+    }
+    80% {
+      left: 90vh;
+      transform: scale(1);
+    }
+    100% {
+      left: 50vh;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes handAnimationTouchBanana {
+    0% {
+      top: 49vh;
+      left: 71vh;
+    }
+    25% {
+      transform: scale(0.8);
+      top: 49vh;
+      left: 71vh;
+    }
+    50% {
+      transform: scale(1);
+      top: 49vh;
+      left: 71vh;
+    }
+    75% {
+      transform: scale(0.8);
+      top: 49vh;
+      left: 71vh;
+    }
+    100% {
+      transform: scale(1);
+      top: 49vh;
+      left: 71vh;
+    }
+  }
+
+  #choose-colors {
+    width: 46vh;
+    height: 18vh;
+    top: 5vh;
+    left: 49vh;
+  }
+
+  #banana-menu {
+    width: 38vh;
+    height: 45vh;
+    top: 25vh;
+    left: 54vh;
+  }
+
+  #yellow-color {
+    width: 15vh;
+    height: 16vh;
+    top: 78vh;
+    left: 46vh;
+  }
+
+  #purple-color {
+    width: 15vh;
+    height: 16vh;
+    top: 78vh;
+    left: 66vh;
+  }
+
+  #blue-color {
+    width: 15vh;
+    height: 16vh;
+    top: 78vh;
+    left: 86vh;
+  }
+
+  /* main-game */
+
+  #game-container {
+    width: 135.25vh;
+    height: 100vh;
+  }
+
+  #game-background {
+    width: 135.25vh;
+    height: 100vh;
+  }
+
+  #squish-that {
+    width: 72vh;
+    height: 11vh;
+    top: 6vh;
+    left: 34vh;
+  }
+
+  #game-hand {
+    width: 18vh;
+    height: 22vh;
+  }
+
+  @keyframes gameHandAnimation {
+    0% {
+      top: 75vh;
+      left: 40vh;
+    }
+    25% {
+      top: 75vh;
+      left: 40vh;
+      transform: scale(0.8);
+    }
+    50% {
+      top: 49vh;
+      left: 82vh;
+      transform: scale(0.8);
+    }
+    75% {
+      top: 49vh;
+      left: 82vh;
+      transform: scale(1);
+    }
+    100% {
+      top: 75vh;
+      left: 40vh;
+      transform: scale(1);
+    }
+  }
+
+  /* packshot */
+
+  #packshot {
+    position: absolute;
+    width: 180.2vh;
+    height: 101.4vh;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  #logo {
+    background-image: url("./assets/img/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 57vh;
+    height: 15.5vh;
+    top: 41vh;
+    left: 66vh;
+  }
+
+  #icon {
+    background-image: url("./assets/img/icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 29vh;
+    height: 30vh;
+    top: 7vh;
+    left: 81vh;
+  }
+
+  #button {
+    background-image: url("./assets/img/button.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 49.7vh;
+    height: 15vh;
+    top: 75vh;
+    left: 69vh;
   }
 
   .button-animation {
